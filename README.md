@@ -41,4 +41,14 @@ nanoAOD skiming code for H->ZGamma studies.
    python condor_setup_lxplus.py  --input_file sample_hzg2016pre.dat --eos_output_path /eos/project/h/htozg-dy-privatemc/{your_dir} --submission_name Run2016preHZG --year "2016preVFP" --isMC 
    python condor_setup_lxplus.py  --input_file sample_hzg2016post.dat --eos_output_path /eos/project/h/htozg-dy-privatemc/{your_dir} --submission_name Run2016postHZG --year "2018postVFP" --isMC 
    
+   python condor_setup_lxplus.py  --input_file sample_hzg_signal_2017_wh.dat --eos_output_path /eos/project/h/htozg-dy-privatemc/jiehan --submission_name Run2017HZGSig --year "2017" --isMC 
+   python condor_setup_lxplus.py  --input_file sample_hzg_signal_2018_wh.dat --eos_output_path /eos/project/h/htozg-dy-privatemc/jiehan --submission_name Run2018HZGSig --year "2018" --isMC 
+   python condor_setup_lxplus.py  --input_file sample_hzg_signal_2016preVFP_wh.dat --eos_output_path /eos/project/h/htozg-dy-privatemc/jiehan --submission_name Run2016preHZGSig --year "2016preVFP" --isMC 
+   python condor_setup_lxplus.py  --input_file sample_hzg_signal_2016postVFP_wh.dat --eos_output_path /eos/project/h/htozg-dy-privatemc/jiehan --submission_name Run2016postHZGSig --year "2016postVFP" --isMC
+
+   export X509_USER_PROXY=~/x509up_u152815
+   condor_submit submit_condor_jobs_lnujj_Run2016preHZGSig.jdl
+   condor_submit submit_condor_jobs_lnujj_Run2016postHZGSig.jdl
+   condor_submit submit_condor_jobs_lnujj_Run2017HZGSig.jdl
+   condor_submit submit_condor_jobs_lnujj_Run2018HZGSig.jdl
    ```
