@@ -34,12 +34,20 @@ nanoAOD skiming code for H->ZGamma studies.
    cd $CMSSW_BASE/src/PhysicsTools/NanoAODTools/python/postprocessing/analysis/nanoAOD_skim
    #try this for test
    python post_proc.py --entriesToRun 100 --inputFile /eos/project/h/htozg-dy-privatemc/shsong/Customized/E3D30224-C63D-CC48-9259-B0BE9FED9BB1.root -m True -y 2017
+   
    if there is Skimmed.root output, you can submit jobs through condor:
    python condor_setup_lxplus.py  --input_file {sample.dat} --eos_output_path /eos/project/h/htozg-dy-privatemc/{your_dir} --submission_name {any_name} --year {str_year} --isMC 
    python condor_setup_lxplus.py  --input_file sample_hzg2017.dat --eos_output_path /eos/project/h/htozg-dy-privatemc/{your_dir} --submission_name Run2017HZG --year "2017" --isMC 
    python condor_setup_lxplus.py  --input_file sample_hzg2018.dat --eos_output_path /eos/project/h/htozg-dy-privatemc/{your_dir} --submission_name Run2018HZG --year "2018" --isMC 
    python condor_setup_lxplus.py  --input_file sample_hzg2016pre.dat --eos_output_path /eos/project/h/htozg-dy-privatemc/{your_dir} --submission_name Run2016preHZG --year "2016preVFP" --isMC 
-   python condor_setup_lxplus.py  --input_file sample_hzg2016post.dat --eos_output_path /eos/project/h/htozg-dy-privatemc/{your_dir} --submission_name Run2016postHZG --year "2018postVFP" --isMC 
+   python condor_setup_lxplus.py  --input_file sample_hzg2016post.dat --eos_output_path /eos/project/h/htozg-dy-privatemc/{your_dir} --submission_name Run2016postHZG --year "2016postVFP" --isMC 
+   ```
+   For background:
+   ```
+   python condor_setup_lxplus.py  --input_file hzg_bkg2017.dat --eos_output_path /eos/project/h/htozg-dy-privatemc/{your_dir} --submission_name Run2017HZG_bkg --year "2017" --isMC 
+   python condor_setup_lxplus.py  --input_file hzg_bkg2018.dat --eos_output_path /eos/project/h/htozg-dy-privatemc/{your_dir} --submission_name Run2018HZG_bkg --year "2018" --isMC 
+   python condor_setup_lxplus.py  --input_file hzg_bkg2016pre.dat --eos_output_path /eos/project/h/htozg-dy-privatemc/{your_dir} --submission_name Run2016preHZG_bkg --year "2016preVFP" --isMC 
+   python condor_setup_lxplus.py  --input_file hzg_bkg2016post.dat --eos_output_path /eos/project/h/htozg-dy-privatemc/{your_dir} --submission_name Run2016postHZG_bkg --year "2016postVFP" --isMC 
    
    python condor_setup_lxplus.py  --input_file sample_hzg_signal_2017_wh.dat --eos_output_path /eos/project/h/htozg-dy-privatemc/jiehan --submission_name Run2017HZGSig --year "2017" --isMC 
    python condor_setup_lxplus.py  --input_file sample_hzg_signal_2018_wh.dat --eos_output_path /eos/project/h/htozg-dy-privatemc/jiehan --submission_name Run2018HZGSig --year "2018" --isMC 
